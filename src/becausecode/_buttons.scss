@@ -1,0 +1,120 @@
+/** Mixins **/
+@mixin bc-button($primary) {
+	background-color: $primary;
+	border-color: $primary;
+	color: #ffffff;
+	&:hover {
+		background-color: $bc-white-primary;
+		color: $primary;
+	}
+	&:active {
+		background-color: #fff;
+	}
+	&.bc-invert {
+		background-color: #ffffff;
+		border-color: $primary;
+		color: $primary;
+		&:hover {
+			background-color: $primary;
+			color: $bc-white-primary;
+		}
+		&:active {
+			background-color: lighten($primary, 5%);
+		}
+	}
+} //bc-button
+
+
+/** Buttons **/
+// No need to apply .bc-button to buttons, it is automatically inherited by <button>
+.bc-button {
+	border: 3px solid transparent;
+	border-radius: 0;
+	cursor: pointer;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 1rem;
+	line-height: inherit;
+	padding: 4px 16px;
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
+
+	// Margin between consecutive buttons
+	& + .bc-button {
+		margin-left: 5px;
+	}
+	// Button Sizes
+	&.bc-xs {
+		font-size: .643rem;
+		padding: 2px 4px;
+	}
+
+	&.bc-sm {
+		font-size: .857rem;
+		padding: 4px 8px;
+	}
+	&.bc-lg {
+		font-size: 1.143rem;
+		padding: 8px 16px;
+	}
+
+	&.bc-xl {
+		font-size: 1.429rem;
+		padding: 10px 20px;
+	}
+
+	// Button Colors
+	&.bc-blue {
+		@include bc-button($bc-blue-primary);
+	}
+	&.bc-red {
+		@include bc-button($bc-red-primary);
+	}
+	&.bc-teal {
+		@include bc-button($bc-teal-primary);
+	}
+	&.bc-purple {
+		@include bc-button($bc-purple-primary);
+	}
+	&.bc-green {
+		@include bc-button($bc-green-primary);
+	}
+	&.bc-orange {
+		@include bc-button($bc-orange-primary);
+	}
+	&.bc-grey {
+		@include bc-button($bc-grey-light);
+	}
+	&.bc-black {
+		@include bc-button($bc-black-primary);
+	}
+
+	// Button Lifts
+	&:hover {
+		&.bc-lift-1 {
+			box-shadow: $bc-box-shadow-lift-2;
+		}
+		&.bc-lift-3, &.bc-lift-2 {
+			box-shadow: $bc-box-shadow-lift-1;
+		}
+	} //hover
+
+	&:active {
+		&.bc-lift-1, &.bc-lift-2, &.bc-lift-3 {
+			box-shadow: none;
+		}
+	} //hover
+
+	// Remove Browser Outline on click
+	&:focus {
+		outline: none;
+	}
+}
+
+a.bc-button{
+	vertical-align: bottom;
+	text-transform: none;
+	text-shadow: none;
+}
+
+button {
+	@extend .bc-button;
+}

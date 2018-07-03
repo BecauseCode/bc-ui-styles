@@ -1,0 +1,72 @@
+@import '_variables';
+@import '_alerts';
+@import '_buttons';
+@import '_headers';
+@import '_lifts';
+@import '_mixins';
+@import '_tables';
+
+@import 'components/_bc-user-comment';
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500|Roboto:400,500&subset=latin-ext');
+
+html {
+	font-size: 14px;
+	line-height: 1.15;
+	margin: 0;
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	background: #fcfcfc;
+	color: $bc-black-light;
+	display: table;
+	font-family: 'Roboto', Arial, sans-serif;
+	height: 100%;
+	margin: 0;
+	margin-bottom: $bc-sticky-footer-height+40px;
+	width: 100%;
+}
+
+/** Helper-Mixin-One-off Styles **/
+.bc-red {
+	color: $bc-red-primary;
+}
+.bc-blue {
+	color: $bc-blue-primary;
+}
+
+.bc-teal {
+	color: $bc-teal-primary;
+}
+.bc-purple {
+	color: $bc-purple-primary;
+}
+.bc-green {
+	color: $bc-green-primary;
+}
+.bc-orange {
+	color: $bc-orange-primary;
+}
+.bc-grey {
+	color: $bc-grey-light;
+}
+.bc-black {
+	color: $bc-black-primary;
+}
+
+/**	Fixed Footer **/
+footer {
+	background-color: $bc-purple-primary;
+	bottom: 0;
+	color: $bc-purple-light;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 11px;
+	height: $bc-sticky-footer-height;
+	line-height: $bc-sticky-footer-height;
+	margin-top: 20px;
+	min-width: 100%;
+	position: absolute;
+	z-index: 100;
+}

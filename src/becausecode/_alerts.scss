@@ -1,0 +1,55 @@
+/** Mixins **/
+@mixin bc-alert($color, $background:"") {
+	background-color: lighten($color, 45);
+	@if $background != "" {
+		background-color: $background;
+	}
+	color: darken($color, 10);
+	border-color: $color;
+	&.bc-dark{
+		background-color: $color;
+		color: #fff;
+		border-color: #fff;
+	}
+} //bc-button
+
+.bc-alert {
+	border: 2px solid #fff;
+	@extend .bc-lift-1;
+	margin: 20px auto;
+	padding: 15px;
+
+	p {
+		margin: 0;
+		text-indent: 20px;
+		&:empty{
+			display: none;
+		}
+	}
+
+	// Alert Colors
+	&.bc-blue {
+		@include bc-alert($bc-blue-primary);
+	}
+	&.bc-red {
+		@include bc-alert($bc-red-primary);
+	}
+	&.bc-teal {
+		@include bc-alert($bc-teal-primary);
+	}
+	&.bc-purple {
+		@include bc-alert($bc-purple-primary, #f6e2f2);
+	}
+	&.bc-green {
+		@include bc-alert($bc-green-primary);
+	}
+	&.bc-orange {
+		@include bc-alert($bc-orange-primary);
+	}
+	&.bc-grey {
+		@include bc-alert($bc-grey-light);
+	}
+	&.bc-black {
+		@include bc-alert($bc-black-light);
+	}
+}

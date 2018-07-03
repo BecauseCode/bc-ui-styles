@@ -1,0 +1,28 @@
+@import '../becausecode/bc-ui-styles';
+
+.label {
+	font-size: 85%;
+	font-weight: normal;
+	padding: 4px 8px;
+}
+
+.btn {
+	@extend .bc-button;
+}
+
+.well {
+	border-radius: 0;
+}
+
+/**	Tables **/
+table.bc-table {
+	tr > td, tr > th{
+		vertical-align: middle;
+	}
+	thead {
+		border-top: 1px solid lighten($bc-grey-light, 15%);
+		tr > th {
+			border-bottom: none;
+		}
+	}
+} //bc-table

@@ -1,0 +1,92 @@
+/**	Tables **/
+.bc-table {
+	font-size: 1rem;
+  border-collapse: collapse;
+  td,th{
+    border-top: 1px solid lighten($bc-grey-light, 15%);
+    text-align: left;
+    padding: .7rem;
+		vertical-align: middle;
+  }
+	thead {
+		background-color: $bc-white-light;
+		padding: 8px;
+		th {
+			color: darken($bc-grey-light, 20%);
+			font-weight: normal;
+		}
+	}
+	tbody {
+		font-size: .857rem;
+	}
+	&.bc-hover tbody tr:hover:not(.bc-no-hover) {
+		background-color: $bc-white-primary;
+		&.bc-blue-bg, .bc-blue-bg {
+			color: $bc-blue-primary;
+			background-color: $bc-white-primary;
+		}
+		&.bc-red-bg, .bc-red-bg {
+			color: $bc-red-primary;
+			background-color: $bc-white-primary;
+		}
+		&.bc-teal-bg, .bc-teal-bg {
+			color: $bc-teal-primary;
+			background-color: $bc-white-primary;
+		}
+		&.bc-purple-bg, .bc-purple-bg {
+			color: $bc-purple-primary;
+			background-color: $bc-white-primary;
+		}
+		&.bc-green-bg, .bc-green-bg {
+			color: $bc-green-primary;
+			background-color: $bc-white-primary;
+		}
+		&.bc-orange-bg, .bc-orange-bg {
+			color: $bc-orange-primary;
+			background-color: $bc-white-primary;
+		}
+		&.bc-grey-bg, .bc-grey-bg {
+			color: $bc-grey-light;
+			background-color: $bc-white-primary;
+		}
+		&.bc-black-bg, .bc-black-bg {
+			color: $bc-black-primary;
+			background-color: $bc-white-primary;
+		}
+	}
+} //bc-table
+
+tr, th, td{
+	&.bc-blue-bg {
+		background-color: $bc-blue-primary;
+		color: $bc-white-primary;
+	}
+	&.bc-red-bg {
+		background-color: $bc-red-primary;
+		color: $bc-white-primary;
+	}
+	&.bc-teal-bg {
+		background-color: $bc-teal-primary;
+		color: $bc-white-primary;
+	}
+	&.bc-purple-bg {
+		background-color: $bc-purple-primary;
+		color: $bc-white-primary;
+	}
+	&.bc-green-bg {
+		background-color: $bc-green-primary;
+		color: $bc-white-primary;
+	}
+	&.bc-orange-bg {
+		background-color: $bc-orange-primary;
+		color: $bc-white-primary;
+	}
+	&.bc-grey-bg {
+		background-color: $bc-grey-light;
+		color: $bc-white-primary;
+	}
+	&.bc-black-bg {
+		background-color: $bc-black-primary;
+		color: $bc-white-primary;
+	}
+}
